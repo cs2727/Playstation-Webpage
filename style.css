@@ -8,6 +8,8 @@
 
 body {
     margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
 }
 
 /* display none elements */
@@ -67,12 +69,85 @@ main {
     background-color: orange;
     position: relative;
     padding-block: 1em;
+    margin-bottom: 2em;
 }
 
+
+
+/* Controller Details Container Stylings */
+
 main #controllerDetails {
+    display: flex;
     flex-basis: 50%;
+    align-items: center;
     background-color: #eeeeee;
 }
+
+main #controllerDetails #innerDetailsContainer {
+    display: flex;
+}
+
+main #controllerDetails #innerDetailsContainer #detailsLine {
+    height: 200px;
+    width: 10px;
+    background-image: linear-gradient(#ff469f, #ff6062);
+    margin-right: 1.2em;
+}
+
+main #controllerDetails #innerDetailsContainer #detailsTextContainer {
+    position: relative;
+    top: -10px;
+}
+
+main #controllerDetails #innerDetailsContainer #detailsTextContainer h1 {
+    margin-top: 0;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+main #controllerDetails #innerDetailsContainer #detailsTextContainer p:nth-child(2)  {
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    color: grey
+}
+
+main #controllerDetails #innerDetailsContainer #detailsTextContainer p:nth-child(3)  {
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    font-size: 1rem;
+    color: rgba(128, 128, 128, 0.582)
+}
+
+main #controllerDetails #innerDetailsContainer #detailsTextContainer p:nth-child(4)  {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 2em;
+}
+
+main #controllerDetails #innerDetailsContainer #detailsTextContainer input {
+    height: 40px;
+    width: 150px;
+    border-radius: 9px;
+    background-image: linear-gradient(#ff469f, #ff6062);
+    border: none;
+    color: white;
+    transition: width 0.5s ease-in;
+    cursor: pointer;
+}
+
+main #controllerDetails #innerDetailsContainer #detailsTextContainer input:hover {
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+/* Controller Image Container Stylings */
 
 main #controllerImage {
     display:flex;
@@ -111,6 +186,7 @@ main #controllerImage img{
 main #addCartDetails img {
     width: 40px;
     margin-left: 4.5em;
+    cursor: pointer;
 }
 
 main #addCartDetails p{
@@ -120,12 +196,51 @@ main #addCartDetails p{
 
 
 
+
+
+
+
+/* Footer related Stylings */
+
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer #socialMediaImgContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 300px
+}
+
+footer #socialMediaImgContainer img{
+    height: 25px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Media Queries */
 
 
 @media only screen and (max-width: 2300px){
     header ul {
-        left: 25%;
+        left: 20%;
     }
 }
 
@@ -156,9 +271,28 @@ main #addCartDetails p{
 
 @media only screen and (max-width: 882px){
     header ul {
-        display: none;
-        
+        display: none; 
+        left: 0;
+        flex-direction: column;
+        position: absolute;
+        z-index: 9;
+        margin-block: 0;
+        bottom: -145px;
+        max-width: 100%;
+        background-image: linear-gradient(#ff469f, #ff6062);
+        padding-right: 1em;
+        padding-block: 0.5em;
     }
+
+    header ul li {
+        display: flex;
+        justify-content: flex-end;
+        margin-block: 0.5em;
+    }
+
+    header ul li a{
+        color: white;
+      }
 
     #menuContainer {
         position: absolute;
@@ -177,6 +311,7 @@ main #addCartDetails p{
 
     main #controllerImage {
         justify-content: flex-end;
+        margin-bottom: 3em;
     }
 
     /* main #controllerImage::after {
@@ -187,14 +322,12 @@ main #addCartDetails p{
        order: 2;
      }
 
-   
-   
 }
 
 
 @media only screen and (max-width: 882px){
    #wrapper {
-    padding-left: 0em;
+    padding-left: 1em;
    }
    
 }

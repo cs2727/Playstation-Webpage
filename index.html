@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playstation Gaming</title>
     <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -18,13 +22,15 @@
                 <img src="images/logo.png" id="logo" />
             </div>
 
-            <ul>
+            <!-- Navigation Links -->
+            <ul id="navigationList">
                 <li><a href='#'>Game Controllers</a></li>
                 <li><a href='#'>VR Accessories</a></li>
                 <li><a href='#'>Media Remotes</a></li>
                 <li><a href='#'>Others</a></li>
             </ul>
 
+            <!-- Burger Emoji for Mobile Responsiveness -->
             <div id="menuContainer">
                 <img src="images/menu.png" id="menu" />
             </div>
@@ -35,13 +41,15 @@
 
             <!-- Controller Details -->
             <div id="controllerDetails">
-                <div id="detailsLine"></div>
-                <div>
-                    <h1>PS4 V2 Dualshock 4</h1>
-                    <p>Wireless Controller for Playstation 4</p>
-                    <p>(Compatible/Generic)</p>
-                    <p>$32.50</p>
-                    <input type="button" value="Buy Now" />
+                <div id="innerDetailsContainer">
+                    <div id="detailsLine"></div>
+                    <div id="detailsTextContainer">
+                        <h1>PS4 V2 <br> Dualshock 4</h1>
+                        <p>Wireless Controller for Playstation 4</p>
+                        <p>(Compatible/Generic)</p>
+                        <p>$32.50</p>
+                        <input type="button" value="Buy Now" />
+                    </div>
                 </div>
             </div>
 
@@ -54,9 +62,17 @@
                     <p>Add to Cart</p>
                 </div>
             </div>
-
-
         </main>
+
+
+        <!-- Footer -->
+        <footer>
+            <div id="socialMediaImgContainer">
+                <img src="images/fb.png" />
+                <img src="images/tw.png" />
+                <img src="images/ig.png" />
+            </div>
+        </footer>
     </div>
 
 
