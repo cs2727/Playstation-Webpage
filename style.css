@@ -31,7 +31,6 @@ body {
 header {
     display: flex;
     align-items: center;
-    background-color: red;
     position: relative;
 }
 
@@ -66,10 +65,9 @@ header ul a {
 
 main {
     display: flex;
-    background-color: orange;
     position: relative;
     padding-block: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 8em;
 }
 
 
@@ -80,7 +78,6 @@ main #controllerDetails {
     display: flex;
     flex-basis: 50%;
     align-items: center;
-    background-color: #eeeeee;
 }
 
 main #controllerDetails #innerDetailsContainer {
@@ -124,7 +121,7 @@ main #controllerDetails #innerDetailsContainer #detailsTextContainer p:nth-child
     margin-bottom: 2em;
 }
 
-main #controllerDetails #innerDetailsContainer #detailsTextContainer input {
+main #controllerDetails #innerDetailsContainer #detailsTextContainer button {
     height: 40px;
     width: 150px;
     border-radius: 9px;
@@ -135,14 +132,21 @@ main #controllerDetails #innerDetailsContainer #detailsTextContainer input {
     cursor: pointer;
 }
 
-main #controllerDetails #innerDetailsContainer #detailsTextContainer input:hover {
-    width: 200px;
+main #controllerDetails #innerDetailsContainer #detailsTextContainer button img {
+    width: 40px;
+    display: none;
 }
 
+main #controllerDetails #innerDetailsContainer #detailsTextContainer button:hover {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
-
-
-
+main #controllerDetails #innerDetailsContainer #detailsTextContainer button:hover #arrowImg {
+    display: block;
+}
 
 
 
