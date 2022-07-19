@@ -1,0 +1,200 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* body styling */
+
+body {
+    margin: 0;
+}
+
+/* display none elements */
+
+#menu {
+    display: none;
+}
+
+
+/* wrapper styling */
+
+#wrapper {
+    padding-left: 10em;
+    padding-top: 2em;
+}
+
+/*header related stylings */
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: red;
+    position: relative;
+}
+
+header #logo {
+    height: 60px;
+    width: 100%;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 800px;
+    max-width: 70%;
+    padding: 0;
+    margin-top: 2em;
+    list-style: none;
+    position: relative;
+    left: 40%;
+}
+
+header ul a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+
+}
+
+
+
+
+/* main container related stylings */
+
+main {
+    display: flex;
+    background-color: orange;
+    position: relative;
+    padding-block: 1em;
+}
+
+main #controllerDetails {
+    flex-basis: 50%;
+    background-color: #eeeeee;
+}
+
+main #controllerImage {
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 70%;
+    position: relative;
+}
+
+main #controllerImage img{
+    width: 60%;
+    z-index: 1;
+    position: relative;
+    right: 30%;
+ }
+
+ main #controllerImage #backgroundGradient {
+    height: 90%;
+    width: 60%;
+    background-image: linear-gradient(#ff469f, #ff6062);
+    position: absolute;
+    right: 0;
+    border-radius: 20px 0 0 20px;
+ }
+
+ main #addCartDetails {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 3%;
+}
+
+main #addCartDetails img {
+    width: 40px;
+    margin-left: 4.5em;
+}
+
+main #addCartDetails p{
+    color: white;
+    font-size: 1.2rem;
+} 
+
+
+
+/* Media Queries */
+
+
+@media only screen and (max-width: 2300px){
+    header ul {
+        left: 25%;
+    }
+}
+
+@media only screen and (max-width: 1311px){
+    #wrapper {
+        padding-left: 2em;
+    }
+
+
+}
+
+@media only screen and (max-width: 960px){
+    header ul {
+        left: 20%;
+        
+    }
+
+    #wrapper {
+        padding-left: 1em;
+    }
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 882px){
+    header ul {
+        display: none;
+        
+    }
+
+    #menuContainer {
+        position: absolute;
+        right: 10%;
+        cursor: pointer;
+    }
+
+    #menu {
+        display: block;
+        height: 40px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main #controllerImage {
+        justify-content: flex-end;
+    }
+
+    /* main #controllerImage::after {
+        height: 35%;
+     } */
+
+    main #controllerDetails{
+       order: 2;
+     }
+
+   
+   
+}
+
+
+@media only screen and (max-width: 882px){
+   #wrapper {
+    padding-left: 0em;
+   }
+   
+}
