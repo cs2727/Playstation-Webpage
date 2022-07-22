@@ -10,6 +10,7 @@ body {
     margin: 0;
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
+    position: relative;
 }
 
 /* display none elements */
@@ -232,9 +233,32 @@ footer #socialMediaImgContainer img{
 
 
 
+/* Navigation when burger Emoji clicked */
 
 
+  header #navigationList {
+        display: block; 
+        left: 0;
+        flex-direction: column;
+        position: absolute;
+        z-index: 9;
+        margin-block: 0;
+        top: 11%;
+        max-width: 100%;
+        background-image: linear-gradient(#ff469f, #ff6062);
+        padding-right: 1em;
+        padding-block: 0.5em;
+    }
 
+    header #navigationList li {
+        display: flex;
+        justify-content: flex-end;
+        margin-block: 0.5em;
+    }
+
+    header #navigationList li a{
+        color: white;
+      }
 
 
 
@@ -276,27 +300,7 @@ footer #socialMediaImgContainer img{
 @media only screen and (max-width: 882px){
     header ul {
         display: none; 
-        left: 0;
-        flex-direction: column;
-        position: absolute;
-        z-index: 9;
-        margin-block: 0;
-        bottom: -145px;
-        max-width: 100%;
-        background-image: linear-gradient(#ff469f, #ff6062);
-        padding-right: 1em;
-        padding-block: 0.5em;
     }
-
-    header ul li {
-        display: flex;
-        justify-content: flex-end;
-        margin-block: 0.5em;
-    }
-
-    header ul li a{
-        color: white;
-      }
 
     #menuContainer {
         position: absolute;

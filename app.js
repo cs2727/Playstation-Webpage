@@ -1,16 +1,22 @@
 const burgerEmojiElement = document.getElementById('menuContainer');
-const navigationListElement = document.getElementById('navigationList');
+const navigationListElement = document.querySelector('ul');
+const headerElement = document.querySelector('header');
 let i = 1;
 
 
+console.log(headerElement);
+
 function toggleNavigation(){
     const oddOrEven = i % 2;
-    
+
     if  (oddOrEven === 1){
-    navigationListElement.style.display = 'block';
+    navigationListElement.id = 'navigationList';
+    headerElement.style.position = 'static';
+    
     } 
     else {
-    navigationListElement.style.display = 'none';
+    navigationListElement.removeAttribute('id');
+    headerElement.style.position = 'relative';
     }
 
     i++;
